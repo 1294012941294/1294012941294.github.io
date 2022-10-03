@@ -1883,7 +1883,7 @@ Game.Launch=function()
 		else Game.Loader.loaded=Game.Init;
 		Game.Loader.Load(['filler.png']);
 	}
-	Game.ErrorFrame=function()
+	Game.ErrorFram=function()
 	{
 		console.log('This isnt the official domain.')
 	}
@@ -15889,20 +15889,6 @@ window.onload=function()
 				LoadLang('loc/'+lang+'.js?v='+Game.version,function(){
 					var launch=function(){
 						Game.Launch();
-						if (top!=self) Game.ErrorFrame();
-						else
-						{
-							console.log('[=== '+choose([
-								'Oh, hello!',
-								'hey, how\'s it hangin',
-								'About to cheat in some cookies or just checking for bugs?',
-								'Remember : cheated cookies taste awful!',
-								'Hey, Orteil here. Cheated cookies taste awful... or do they?',
-							])+' ===]');
-							Game.Load();
-							//try {Game.Load();}
-							//catch(err) {console.log('ERROR : '+err.message);}
-						}
 					}
 					if (App && App.loadMods) App.loadMods(launch);
 					else launch();
