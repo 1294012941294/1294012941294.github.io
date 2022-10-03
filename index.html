@@ -1,26 +1,16 @@
 <script>    
     function opencc(){
-      var top = window.screen.height - 300;
-      top = top > 0 ? top/2 : 0;
-            
-      var left = window.screen.width - 400;
-      left = left > 0 ? left/2 : 0;
-      var tab = window.open("about:blank", target="_blank");
-      tab.document.documentElement.innerHTML = '<!DOCTYPE html><html><style>body {margin:0;overflow:hidden}</style></head><body><iframe width="100%" height="100%" src="'+window.location.href+'/cc/index.html" frameborder="0"></iframe></body></html>';
-      tab.document.close();
-      window.location.assign("https://powerschool.com"); 
+      alert('This website will not be hidden from your history. We are working on a fix.')
+      window.open(window.location.href+'/cc/index.html', target="_blank");
+      window.location.assign("https://docs.google.com"); 
     }
 
     function openmc(){
-      var top = window.screen.height - 300;
-      top = top > 0 ? top/2 : 0;
-            
-      var left = window.screen.width - 400;
-      left = left > 0 ? left/2 : 0;
+      alert('This website will be hidden from your history.')
       var tab = window.open("about:blank", target="_blank");
       tab.document.documentElement.innerHTML = '<!DOCTYPE html><html><style>body {margin:0;overflow:hidden}</style></head><body><iframe width="100%" height="100%" src="'+window.location.href+'mc.html" frameborder="0"></iframe></body></html>';
       tab.document.close();
-      window.location.assign("https://powerschool.com"); 
+      window.location.assign("https://docs.google.com"); 
     }
 </script>
 </script>
