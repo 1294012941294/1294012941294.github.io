@@ -1,4 +1,4 @@
-﻿/*
+/*
 All this code is copyright Orteil, 2013-2022.
 	-with some help, advice and fixes by Nicholas Laux, Debugbro, Opti, the folks at Playsaurus, and lots of people on reddit, Discord, and the DashNet forums
 	-also includes a bunch of snippets found on stackoverflow.com and others
@@ -1882,6 +1882,10 @@ Game.Launch=function()
 		if (typeof PRELOAD!=='undefined') Game.Loader.loaded=PRELOAD(Game.Init);
 		else Game.Loader.loaded=Game.Init;
 		Game.Loader.Load(['filler.png']);
+	}
+	Game.ErrorFrame=function()
+	{
+		console.log('This isnt the official domain.')
 	}
 	Game.timedout=false;
 	Game.Timeout=function()
@@ -15885,7 +15889,7 @@ window.onload=function()
 				LoadLang('loc/'+lang+'.js?v='+Game.version,function(){
 					var launch=function(){
 						Game.Launch();
-						if true;
+						if (top!=self) Game.ErrorFrame();
 						else
 						{
 							console.log('[=== '+choose([
