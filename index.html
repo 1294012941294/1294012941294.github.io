@@ -1,1 +1,23 @@
-test
+<script>    
+    function launchmc(){
+
+      var tab = window.open("about:blank", target="_blank");
+      tab.document.documentElement.innerHTML = '<head> <link rel="shortcut icon" type="image/x-icon" href="drive.ico" /> </head><body><iframe src="https://g.deev.is/eaglercraft/" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;"></body>';
+      tab.document.close();
+      window.location.assign("https://docs.google.com"); 
+    }
+    
+    function launchcookie(){
+
+      var tab = window.open("about:blank", target="_blank");
+      tab.document.documentElement.innerHTML = '<head> <link rel="shortcut icon" type="image/x-icon" href="drive.ico" /> </head><iframe src="http://ozh.github.io/cookieclicker/" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;">';
+      tab.document.close();
+      window.location.assign("https://docs.google.com"); 
+    }
+</script>
+
+<center>
+    <h1>Once you pick a game, the game or this launch page will be erased from your history.</h1>
+    <button onclick="launchmc()">Launch Minecraft</button>
+    <button onclick="launchcookie()">Launch Cookie Clicker</button>
+</center>
